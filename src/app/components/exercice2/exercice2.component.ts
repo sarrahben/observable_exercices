@@ -10,7 +10,7 @@ import { ServiceService } from '../../services/service/s.service'
 })
 export class Exercice2Component implements OnInit {
   
-  data: Array<any>;
+  data: Array<any>=[];
   items: Array<any> = [];
   current=0;
   
