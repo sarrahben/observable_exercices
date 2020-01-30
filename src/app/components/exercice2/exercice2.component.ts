@@ -10,10 +10,10 @@ import { ServiceService } from '../../services/service/s.service'
 })
 export class Exercice2Component implements OnInit {
   
-  data: any;
+  data: Array<any>;
   items: Array<any> = [];
   current=0;
-  img : any;
+  
 
   
   constructor(private $ser: ServiceService) { 
@@ -22,19 +22,14 @@ export class Exercice2Component implements OnInit {
   }
   
   ngOnInit() {
-
-  }
-
-  getData() {
     this.$ser.getData().subscribe( // avec http  je donne a subscribe de formules landa 
       s => this.data = s, // 1er ca normal 
       error => alert('error !!') //2 em  expresseion declancher en cas d erreur 
       );
  this.current=1;
- 
+  }
 
-
-}
+  
 
 
 

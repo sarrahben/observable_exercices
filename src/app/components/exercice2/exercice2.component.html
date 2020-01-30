@@ -1,14 +1,12 @@
 <app-header [title]="'Exercice 2'"></app-header>
 <app-header [title]="'Movies  API'"></app-header>
-<div>
-    <button (click)="getData()">Get Data</button>
-</div>
+
 <div *ngIf="current===1" id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div  *ngFor="let c of data.results"  class="item ">
       <div>
-        <img src="http://image.tmdb.org/t/p/w185{{c.backdrop_path}}" alt="Los Angeles">
+        <img src="http://image.tmdb.org/t/p/original{{c.backdrop_path}}" alt="film">
       </div>
       <div class="information">
         <h1>{{c.title}}    </h1>
